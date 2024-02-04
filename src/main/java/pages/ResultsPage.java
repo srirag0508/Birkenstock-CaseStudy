@@ -1,4 +1,5 @@
 package pages;
+import junit.framework.JUnit4TestCaseFacade;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -123,9 +124,38 @@ public class ResultsPage {
 
     public void verifySize() {
         WebElement sizeElement = getSizeElement();
-        System.out.println("Size displyed on website is : "+sizeElement);
 
+        // Extract text from the div
+        String sizeText = sizeElement.getText();
+
+        // Split the text using the separator '|'
+        String[] sizeValues = sizeText.split("\\|");
+
+        // Assuming sizeValues[0] contains "2,5 UK" and sizeValues[1] contains "35 EU"
+        String actualNum1 = cleanUpString(sizeValues[0]);
+        String actualNum2 = cleanUpString(sizeValues[1]);
+        //
+
+        // Expected values after removing special characters
+        String expectedNum1 = cleanUpString("2,5 UK");
+        String expectedNum2 = cleanUpString("35 EU");
+
+
+        // Assert the cleaned up values with the expected values obtained from the webpage
+        assertEquals("Size does not match", actualNum1, expectedNum1);
+        assertEquals("Size does not match", actualNum2, expectedNum2);
+
+        System.out.println("Assert passed!");
     }
+
+
+    // Utility method to clean up a string by removing special characters
+    private String cleanUpString(String input) {
+        return input.replaceAll("[^a-zA-Z0-9]", "");
+    }
+
+
+
 
     public void verifyWidth() {
         WebElement widthElement = getWidthElement();

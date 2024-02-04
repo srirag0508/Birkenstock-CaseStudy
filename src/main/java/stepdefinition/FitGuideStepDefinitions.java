@@ -16,6 +16,8 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 
+import static junit.framework.TestCase.assertEquals;
+
 public class FitGuideStepDefinitions {
 
 
@@ -121,9 +123,9 @@ public class FitGuideStepDefinitions {
 
     }
 
-    @And("I verify the resulted Width")
-    public void iVerifyTheResultedWidth() {
-
+    @And("I verify the resulted Size")
+    public void iVerifyTheResultedSize() {
+        resultsPage.verifySize();
 
     }
 
@@ -145,6 +147,8 @@ public class FitGuideStepDefinitions {
         cart.verifyproductdetails();
 
     }
+
+
 
 
 }

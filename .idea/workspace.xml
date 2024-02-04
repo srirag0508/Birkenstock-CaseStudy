@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5bec8f5-d039-489e-bffe-059bf01d5602" name="Changes" comment="First Commit">
+    <list default="true" id="e5bec8f5-d039-489e-bffe-059bf01d5602" name="Changes" comment="Second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CartSummaryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CartSummaryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/FitSizeFlyInScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/FitSizeFlyInScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Features/sizecalculatorusingdatamap.feature" beforeDir="false" afterPath="$PROJECT_DIR$/Features/sizecalculatorusingdatamap.feature" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/ResultsPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinition/sizecalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stepdefinition/sizecalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestRunner/TestRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/stepdefinition/FitGuideStepDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/stepdefinition/FitGuideStepDefinitions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +23,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2bcegJQYTrqUoDi3J3wLzl2XpRN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -80,11 +82,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707055775578</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Second commit">
+      <option name="closed" value="true" />
+      <created>1707078934845</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707078934845</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Commit" />
+    <MESSAGE value="Second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second commit" />
   </component>
 </project>

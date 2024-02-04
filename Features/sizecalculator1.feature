@@ -21,7 +21,7 @@ Feature: Fit Guide Automation
 
     Then I verify the result displyed
 
-    And I verify the resulted Width
+    And I verify the resulted Size
 
     And I click on the Add to Shopping Cart button
 
