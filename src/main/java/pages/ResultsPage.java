@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 
 
 public class ResultsPage {
@@ -103,17 +104,22 @@ public class ResultsPage {
     }
 
     // Page Actions
-    public void verifyIdealSandalText(String errorMessage) {
+    public void verifyIdealSandalText(String expectedText) {
         WebElement textElement = getHeadlineText();
+        String actualText = textElement.getText();
 
-        if (errorMessage.isEmpty()) {
-            assertEquals(textElement.getText(), "Your ideal sandal size and width are:");
-        } else {
-            Assert.assertTrue(errorMessage, errorMessage.isEmpty());
+        // Use assertEquals to compare the expected and actual text
+        try {
+            assertEquals(expectedText, actualText);
+        } catch (AssertionError e) {
+            fail("Headline is not as expected: " + e.getMessage());
         }
-
-
     }
+
+
+
+
+
 
     public void verifySize() {
         WebElement sizeElement = getSizeElement();

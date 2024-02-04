@@ -51,7 +51,7 @@ public class sizecalculatorTest {
     public void iVerifyTheResultScreen() {
 
              // Verify Ideal Sandal Text
-            resultsPage.verifyIdealSandalText("");
+            resultsPage.verifyIdealSandalText("Headline is not as per Expected ");
 
             // Verify Size
             resultsPage.verifySize();

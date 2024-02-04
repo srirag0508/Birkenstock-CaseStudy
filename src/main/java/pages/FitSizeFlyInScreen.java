@@ -27,6 +27,20 @@ public class FitSizeFlyInScreen {
     @FindBy(xpath = "//button[normalize-space()='Calculate Size']")
     public WebElement calculateButton;
 
+    @FindBy(id = "length-select-left")
+    public WebElement leftLength;
+
+    @FindBy(id = "width-select-left")
+    public WebElement leftWidth;
+
+    @FindBy(id = "length-select-right")
+    public WebElement rightLength;
+
+    @FindBy(id = "width-select-right")
+    public WebElement rightWidth;
+
+
+
     // Constructor
 
     public FitSizeFlyInScreen(WebDriver driver, Duration timeout) {
@@ -75,5 +89,23 @@ public class FitSizeFlyInScreen {
         return wait.until(driver -> calculateButton.isDisplayed());
     }
 
-    // Additional methods for actions on the page can be added as needed
+    //
+    public void clickCalculateSizeButton() {
+        calculateButton.click();
+    }
+
+
+    public void selectFromDropdown(String fieldName, By dropdownLocator, String selectedValue) {
+        WebElement dropdownElement = driver.findElement(dropdownLocator);
+        Select dropdown = new Select(dropdownElement);
+
+        // Select the value from the dropdown
+        dropdown.selectByVisibleText(selectedValue);
+
+        // Verify if the selected value is as expected
+        if (!dropdown.getFirstSelectedOption().getText().equals(selectedValue)) {
+            System.out.println(fieldName + ": Value '" + selectedValue + "' not available in dropdown.");
+
+        }
+    }
 }

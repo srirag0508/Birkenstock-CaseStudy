@@ -51,5 +51,13 @@ public class CartSummaryPage {
         assertTrue(keepShoppingButton.isDisplayed());
     }
 
+    // Verify Keep Shopping button
+    public void verifyproductdetails() {
+        WebElement productdetails = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='product-info']")));
+        assertTrue(productdetails.isDisplayed());
+    }
+
+
+
 
 }
